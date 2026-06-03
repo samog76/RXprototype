@@ -51,7 +51,7 @@ export default function LandingPage() {
             </p>
 
             <div className="flex gap-4 justify-center">
-              <Link href="/marketplace">
+              <Link href="/login">
                 <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 font-medium">
                   Get Started
                   <ArrowRight className="w-5 h-5" />
