@@ -24,7 +24,7 @@ interface Product {
       name: string;
     }
   }[];
-  mediaUrls: string[];
+  images?: { url: string }[];
 }
 
 function ProductCard({ product }: { product: Product }) {
@@ -32,6 +32,7 @@ function ProductCard({ product }: { product: Product }) {
   const rating = 4.8;
   const reviews = 120;
   const categoryName = product.categories?.[0]?.category?.name || 'Uncategorized';
+  const imageUrl = product.images?.[0]?.url;
 
   return (
     <motion.div
@@ -42,8 +43,8 @@ function ProductCard({ product }: { product: Product }) {
       transition={{ duration: 0.3 }}
     >
       <div className="h-56 bg-secondary relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-        {product.mediaUrls && product.mediaUrls[0] ? (
-          <img src={product.mediaUrls[0]} alt={product.name} className="w-full h-full object-cover" />
+        {imageUrl ? (
+          <img src={imageUrl} alt={product.name} className="w-full h-full object-cover" />
         ) : (
           <img src={`https://picsum.photos/seed/${product.id}/600/400`} alt={product.name} className="w-full h-full object-cover" />
         )}
