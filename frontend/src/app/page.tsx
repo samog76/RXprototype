@@ -81,7 +81,7 @@ export default function LandingPage() {
         </section>
 
         <section className="max-w-7xl mx-auto px-8 py-20">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: Users,
@@ -133,7 +133,7 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="grid grid-cols-3 gap-12 text-center"
+              className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
             >
               {[
                 { value: "1M+", label: "Active Users" },

@@ -127,7 +127,7 @@ export function RegisterForm() {
 
             <div>
               <label className="block mb-2 text-foreground font-medium">Account Type</label>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <label className="relative flex items-center justify-center p-4 border-2 border-border rounded-lg cursor-pointer hover:border-primary transition-all bg-secondary">
                   <input
                     type="radio"

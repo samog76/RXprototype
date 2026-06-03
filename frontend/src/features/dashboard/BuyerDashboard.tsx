@@ -109,15 +109,15 @@ export function BuyerDashboard() {
 
       <div className="max-w-7xl mx-auto py-8 px-8">
         {/* Stats Grid */}
-        <div className="grid grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {STATS.map((stat, i) => (
             <StatCard key={i} stat={stat} />
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Recent Orders */}
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2 space-y-8">
             <div className="bg-card border border-border rounded-2xl p-6">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-foreground font-semibold">Recent Orders</h3>
