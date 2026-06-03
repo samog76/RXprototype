@@ -27,41 +27,57 @@ export default function LandingPage() {
 
       <main className="pt-20">
         <section className="max-w-7xl mx-auto px-8 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-block mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-xl"
             >
-              Welcome to the future of social commerce
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="inline-block mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
+              >
+                Welcome to the future of social commerce
+              </motion.div>
+
+              <h1 className="mb-6 text-foreground text-5xl font-extrabold leading-tight">
+                Connect, Share, and Shop in One Place
+              </h1>
+
+              <p className="text-xl text-muted-foreground mb-10">
+                Riba-X brings together social networking and online shopping. Discover products from friends, share your finds, and shop seamlessly.
+              </p>
+
+              <div className="flex gap-4">
+                <Link href="/login">
+                  <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 font-medium">
+                    Get Started
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </Link>
+                <button className="px-8 py-4 border-2 border-border bg-card rounded-xl hover:bg-secondary transition-all font-medium">
+                  Learn More
+                </button>
+              </div>
             </motion.div>
 
-            <h1 className="mb-6 text-foreground">
-              Connect, Share, and Shop in One Place
-            </h1>
-
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Riba-X brings together social networking and online shopping. Discover products from friends, share your finds, and shop seamlessly.
-            </p>
-
-            <div className="flex gap-4 justify-center">
-              <Link href="/login">
-                <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 font-medium">
-                  Get Started
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <button className="px-8 py-4 border-2 border-border bg-card rounded-xl hover:bg-secondary transition-all font-medium">
-                Learn More
-              </button>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative hidden md:block"
+            >
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-[2.5rem] transform translate-x-4 translate-y-4"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80" 
+                alt="People shopping online" 
+                className="relative rounded-[2.5rem] shadow-2xl object-cover w-full h-[600px]"
+              />
+            </motion.div>
+          </div>
         </section>
 
         <section className="max-w-7xl mx-auto px-8 py-20">

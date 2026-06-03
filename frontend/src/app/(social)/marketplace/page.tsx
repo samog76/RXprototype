@@ -41,15 +41,13 @@ function ProductCard({ product }: { product: Product }) {
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="h-56 bg-secondary relative overflow-hidden">
+      <div className="h-56 bg-secondary relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
         {product.mediaUrls && product.mediaUrls[0] ? (
           <img src={product.mediaUrls[0]} alt={product.name} className="w-full h-full object-cover" />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-            Product Image
-          </div>
+          <img src={`https://picsum.photos/seed/${product.id}/600/400`} alt={product.name} className="w-full h-full object-cover" />
         )}
-        <div className="absolute top-3 right-3 px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full">
+        <div className="absolute top-3 right-3 px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full shadow-md z-10">
           NEW
         </div>
       </div>
